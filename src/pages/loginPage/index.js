@@ -11,60 +11,62 @@ const LoginPage = Form.create({})(({ handleLogin, isFetching, form: { getFieldDe
   };
   return (
     <div className="login-container">
-      <Form className="login-container-form">
-        <h2>物联网管控系统平台</h2>
-        <Form.Item {...formItemLayout}>
-          {getFieldDecorator('username', {
-            rules: [
-              {
-                required: true,
-                message: '请输入用户名',
-              },
-            ],
-          })(<Input
-            prefix={<Icon type="user" style={{ color: '#79A8E0' }} />}
-            placeholder="用户名"
-          />)}
-        </Form.Item>
-        <Form.Item {...formItemLayout}>
-          {
-            getFieldDecorator('passWord', {
+      <div className="login-container-form">
+        <h2>物联网管控平台</h2>
+        <Form>
+          <Form.Item {...formItemLayout}>
+            {getFieldDecorator('username', {
               rules: [
                 {
                   required: true,
-                  message: '请输入密码',
+                  message: '请输入用户名',
+                },
+              ],
+            })(<Input
+              prefix={<Icon className="iconComm user" />}
+              placeholder="用户名"
+            />)}
+          </Form.Item>
+          <Form.Item {...formItemLayout}>
+            {
+              getFieldDecorator('passWord', {
+                rules: [
+                  {
+                    required: true,
+                    message: '请输入密码',
+                  }
+                ]
+              })(
+                <Input
+                  prefix={<Icon className="iconComm pwd" />}
+                  type="password"
+                  placeholder="密码"
+                />
+              )
+            }
+          </Form.Item>
+          <Form.Item {...formItemLayout}>
+            <Button type="primary" onClick={() => {
+              validateFields((err, value) => {
+                if (!err) {
+                  handleLogin(value).then(() => {
+                    history.push('/');
+                  });
                 }
-              ]
-            })(
-              <Input
-                prefix={<Icon type="lock" style={{ color: '#79A8E0' }} />}
-                type="password"
-                placeholder="密码"
-              />
-            )
-          }
-        </Form.Item>
-        <Form.Item {...formItemLayout}>
-          <Button type="primary" onClick={() => {
-            validateFields((err, value) => {
-              if (!err) {
-                handleLogin(value).then(() => {
-                  history.push('/');
-                });
-              }
-            });
-          }} className="login-form-button">
-            登录
-          </Button>
-        </Form.Item>
-      </Form>
+              });
+            }} className="login-form-button" loading={isFetching}>
+              登录
+            </Button>
+          </Form.Item>
+        </Form>
+      </div>
     </div>
   );
 });
 
-const mapStateToProps = state => {
+const mapStateToProps = userState => {
   return {
-    user: state.user
+    isFetching: userState.isFetching
   };
 };
 

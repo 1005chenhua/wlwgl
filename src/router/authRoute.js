@@ -7,6 +7,7 @@ import { getToken } from '@/utils/auth';
 const authRoute = ({ component: Component, authTo, user, getUserByToken, ...rest }) => (
   // eslint-disable-next-line complexity
   <Route {...rest} render={props => {
+    console.log(props);
     const isLogin = props.match.path === '/login';
     const token = getToken();
     const c = <Component {...props} />;
