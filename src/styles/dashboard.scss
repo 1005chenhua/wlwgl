@@ -1,0 +1,89 @@
+.dashboard-container {
+	height: 100vh;
+	background: url(../assets/images/dashboard/dashboard-bg.png);
+    background-size: 100% 100%;
+    &-content {
+        width: 100%;
+        height: calc(100vh - 100px);
+        position: relative;
+        &-textBox {
+            width: 218px;
+            height: 274px;
+            background: url(../assets/images/dashboard/deviceManage-bg.png);
+            background-size: 100% 100%;
+            text-align: center;
+            float: left;
+            position: absolute;
+            top: 0%;
+            left: 15%;
+            cursor: pointer;
+            transform: scale(0.8);
+            span {
+                font-size:28px;
+                font-family:Adobe Heiti Std;
+                font-weight:bold;
+                color:rgba(81,248,255,1);
+                margin-top: 145px;
+                display: inline-block;
+            }
+            &:nth-child(2) {
+                background: url(../assets/images/dashboard/StatisticalReportForms-bg.png);
+                background-size: 100% 100%;
+                height: 270px;
+                top: 48%;
+                left: 20%;
+            }
+            &:nth-child(3) {
+                background: url(../assets/images/dashboard/CallPoliceManger-bg.png);
+                background-size: 100% 100%;
+                height: 268px;
+                top: 25%;
+                left: 45%;
+            }
+            &:nth-child(4) {
+                background: url(../assets/images/dashboard/JournalManage-bg.png);
+                background-size: 100% 100%;
+                height: 266px;
+                top: 59%;
+                left: 53.5%;
+            }
+            &:nth-child(5) {
+                background: url(../assets/images/dashboard/serviceManage-bg.png);
+                background-size: 100% 100%;
+                height: 270px;
+                top: -2%;
+                left: 67.5%;
+            }
+            &:nth-child(6) {
+                background: url(../assets/images/dashboard/operationManage-bg.png);
+                background-size: 100% 100%;
+                height: 267px;
+                top: 38%;
+                left: 76%;
+            }
+        }
+    }
+    .error-box {
+        width: 389px;
+        height: 281px;
+        background: url(../assets/images/dashboard/error-bg.png);
+        background-size: 100% 100%;
+        position: absolute;
+        bottom: -10px;
+        right: -20px;
+        z-index: 999;
+        cursor: pointer;
+        padding: 60px 70px;
+        transform: scale(0.80);
+        img {
+            margin-left: 88px;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size:14px;
+            font-family:Adobe Heiti Std;
+            font-weight:normal;
+            color:rgba(255,103,76,1);
+        }
+    }
+}
