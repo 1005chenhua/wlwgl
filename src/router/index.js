@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import AuthRoute from './authRoute';
 
+import Dashboard from '@/pages/dashboard';
 import LoginPage from '@/pages/loginPage';
 import ServiceSelect from '@/pages/serviceSelect';
 import Layout from '@/pages/layout';
@@ -45,9 +46,9 @@ export default () => (
   <HashRouter>
     <Switch>
       <AuthRoute exact path="/login" authTo="/" component={LoginPage} />
-      <Route exact path="/service" component={ServiceSelect} />
+      <Route exact path="/Dashboard" component={Dashboard} />
       <AuthRoute path="/jd" authTo="/login" component={Layout} />
-      <Redirect from="/" to="/jd" />
+      <Redirect from="/" to="/Dashboard" />
       <Route component={Page404} />
     </Switch>
   </HashRouter>
