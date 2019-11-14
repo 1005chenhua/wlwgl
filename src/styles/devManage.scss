@@ -5,17 +5,18 @@
     background-size: 100% 100%;
     padding: 30px;
     display: flex;
-    .devManage-container-left {
+    &-left {
         width: 20%;
         .dev-con-left-box {
             width: 173px;
             height: 210px;
-            margin: 30px auto 0;
+            margin: 24px auto 0;
             .box-img {
                 width: 173px;
                 height: 173px;
-                text-align: center;
-                line-height: 173px;
+                display: flex;
+                align-items:center;
+                justify-content:center;
                 background: url(../assets/images/box-img.png);
                 background-size: 100% 100%;
                 span {
@@ -32,26 +33,164 @@
             }
         }
     }
-    .devManage-container-right {
+    &-right {
         width: 80%;
         padding: 24px;
         .dev-con-right-box {
             width: 23%;
-            height: 208px;
+            height: 205px;
             background: url(../assets/images/boxText-bg.png);
             background-size: 100% 100%;
             margin-right: 2%;
-            margin-bottom: 2.5%;
+            margin-bottom: 2%;
             float: left;
+            cursor: pointer;
             h4 {
-                font-size:24px;
+                font-size:22px;
                 font-family:Adobe Heiti Std;
                 font-weight:bold;
                 color:rgba(255,255,255,1);
-                line-height: 80px;
+                line-height: 88px;
                 text-align: center;
+                margin-bottom: 0;
                 text-shadow: #016892 0.1em 0.1em 0.2em;
             }
+            .total {
+                color: #fff;
+                text-align: center;
+                span {
+                    font-size: 26px;
+                    color:rgba(238,171,83,1);
+                    font-weight:400;
+                }
+            }
+            .text {
+                padding: 10px 30px;
+                color: #fff;
+                span:first-child {
+                    float: left;
+                }
+                span:last-child {
+                    float: right;
+                }
+            }
+        }
+    }
+}
+
+
+// 采集分析
+.inforAnasy-container {
+    width: 100%;
+    height: 100%;
+    background: url(../assets/images/content-bg.png);
+    background-size: 100% 100%;
+    padding: 24px 22px;
+    &-top {
+        width: 100%;
+        height: 88px;
+    }
+    &-bottom {
+        height: calc(100% - 88px);
+        .inforAnasy-box {
+            width: 24%;
+            height: 200px;
+            margin: 0 0.5% 18px;
+            float: left;
+            background: url(../assets/images/InfoAnasy-bg.png);
+            background-size: 100% 100%;
+            padding: 16px;
+            display: flex;
+            &-left {
+                width: 80%;
+                height: 100%;
+                &-text {
+                    height: 128px;
+                    width: 100%;
+                    display: flex;
+                    .textBgBox {
+                        width: 128px;
+                        height: 128px;
+                        background: #0D3561;
+                        border: 1px solid #42B3E3;
+                    }
+                    .textTextBox {
+                        width: calc(100% - 138px);
+                        padding: 0 20px;
+                        color: #fff;
+                        span {
+                            display: block;
+                            margin-bottom: 6px;
+                        }
+                    }
+                }
+                &-btn {
+                    padding-top: 10px;
+                    .ant-btn {
+                        width: 82px;
+                        height: 33px;
+                        background: url(../assets/images/InfoAnasyBtn-bg.png);
+                        background-size: 100% 100%;
+                        border: none;
+                        margin-right: 12px;
+                        color: #FFF;
+                    }
+                }
+            }
+            &-right {
+                width: 20%;
+                height: 100%;
+                position: relative;
+                .ant-progress-line {
+                    transform: rotate(-90deg);
+                    width: 135px;
+                    position: absolute;
+                    top: 66px;
+                    right: -26px;
+                    .ant-progress-inner {
+                        height: 12px;
+                        .ant-progress-bg {
+                            height: 12px !important;
+                        }
+                    }
+                }
+                span {
+                    position: absolute;
+                    bottom: 0;
+                    left: 12px;
+                    color: #fff;
+                }
+            }
+            &:nth-child(3n) {
+                margin-bottom: 12px;
+            }
+        }
+    }
+}
+
+// 监测分析
+.detection-container {
+    width: 100%;
+    height: 100%;
+    background: url(../assets/images/content-bg.png);
+    background-size: 100% 100%;
+    padding: 24px 22px;
+    &-left {
+        width: 50%;
+        height: 100%;
+        float: left;
+        background: url(../assets/images/detection-left-bg.png);
+        background-size: 100% 100%;
+    }
+    &-right {
+        width: 50%;
+        height: 100%;
+        float: right;
+        div {
+            width: 100%;
+            height: 50%;
+            background: url(../assets/images/detection-right-bg.png);
+            background-size: 100% 100%;
         }
     }
 }

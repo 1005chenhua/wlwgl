@@ -9,6 +9,7 @@ import AuthRoute from './authRoute';
 
 import LoginPage from '@/pages/loginPage';
 import ServiceSelect from '@/pages/serviceSelect';
+import InfoAnasy from '@/pages/deviceManage/infoAnasy';
 import DeviceManage from '@/pages/deviceManage';
 import Page404 from '@/pages/page404';
 
@@ -47,6 +48,7 @@ export default () => (
       <AuthRoute exact path="/login" authTo="/" component={LoginPage} />
       <Route exact path="/Home" component={Home} />
       <Route exact path="/DeviceManage" component={DeviceManage} />
+      <Route exact path="/InfoAnasy" component={InfoAnasy} />
       <AuthRoute path="/jd" authTo="/login" component={DeviceManage} />
       <Redirect from="/" to="/Home" />
       <Route component={Page404} />
