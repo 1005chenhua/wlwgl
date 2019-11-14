@@ -1,0 +1,52 @@
+.dev-search{
+    display: flex;
+    margin-bottom: 21px;
+    &-select{
+        width: 253px;
+        height: 30px;
+        border: 1px solid #07A6FF;
+        border-radius: 2px;
+        position: relative;
+        margin-right: 20px;
+        &-title{
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            color: #fff;
+            background:rgba(7,166,255,0.3);
+            position: absolute;
+            z-index: 999;
+            text-align: center;
+        }
+        .ant-select{
+            width: 100% !important;
+            height: 100%;
+            &-selection-selected-value{
+                padding-left: 100px;
+                color: #fff;
+            }
+            &-selection--single{
+                background: transparent;
+                height: 100% !important;
+                border: none;
+            }
+            .ant-select-arrow .ant-select-arrow-icon svg{
+                color: #fff;
+            }
+        }
+        input{
+            width: 100% !important;
+            height: 100%;
+            color: #fff;
+            padding-left: 102px;
+            background: transparent;
+            border: none;
+        }
+        .ant-calendar-picker{
+            .anticon svg{
+                color: #fff;
+            }
+        }
+        
+    }
+}
