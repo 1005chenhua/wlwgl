@@ -23,7 +23,7 @@ const LoginPage = Form.create({})(({ handleLogin, isFetching, form: { getFieldDe
                 },
               ],
             })(<Input
-              prefix={<Icon className="iconComm user" />}
+              prefix={<Icon type="XX" className="iconComm user" />}
               placeholder="用户名"
             />)}
           </Form.Item>
@@ -38,7 +38,7 @@ const LoginPage = Form.create({})(({ handleLogin, isFetching, form: { getFieldDe
                 ]
               })(
                 <Input
-                  prefix={<Icon className="iconComm pwd" />}
+                  prefix={<Icon type="XX" className="iconComm pwd" />}
                   type="password"
                   placeholder="密码"
                 />

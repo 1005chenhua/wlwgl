@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
-import { loginByUsername } from '@/redux/actions';
-import { createHashHistory } from 'history';
 import Header from '@/components/header';
 
 
 const dashboard = () => {
   return (
     <div className="dashboard-container">
-      <Header />>
+      <Header />
       <div className="dashboard-container-content">
         <div className="dashboard-container-content-textBox"><span>设备管理</span></div>
         <div className="dashboard-container-content-textBox"><span>统计报表</span></div>
