@@ -1,5 +1,6 @@
 @import '~antd/dist/antd.css';
 @import './dashboard';
+@import './devManage';
 @import './login';
 
 body {
@@ -78,4 +79,10 @@ body {
   height: 100vh;
 	background: url(../assets/images/login/bg.png);
   background-size: 100% 100%;
+  .layout-container-content {
+    padding: 0 22px 24px 22px;
+    box-sizing: border-box;
+    width: 100%;
+    height: calc(100vh - 100px);
+  }
 } 
