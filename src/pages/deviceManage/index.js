@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import { Layout, Menu } from 'antd';
 import { RouteList, asyncRoutes } from '@/router';
 import { createHashHistory } from 'history';
@@ -9,8 +10,8 @@ import DevAlarm from './devAlarm';
 const history = createHashHistory();
 
 // eslint-disable-next-line complexity
-export default ({ match }) => {
-  const [visible, setVisible] = useState('0');
+const Device = () => {
+  const [visible, setVisible] = useState('2');
   return (
     <div className="layout-container">
       <Header />
@@ -30,3 +31,4 @@ export default ({ match }) => {
     </div>
   );
 };
+export default connect()(Device);
