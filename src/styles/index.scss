@@ -1,7 +1,8 @@
 @import '~antd/dist/antd.css';
 @import './dashboard';
 @import './login';
-
+$fullHeight: 100vh;
+$headerHight: 100px;
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -79,3 +80,34 @@ body {
 	background: url(../assets/images/login/bg.png);
   background-size: 100% 100%;
 } 
+
+/* 设备管理index tab样式 */
+.footer{
+  width: 100%;
+  height: calc(#{$fullHeight} - #{$headerHight});
+  position: relative;
+  padding: 32px 27px;
+  .tabInfo{
+    position: absolute;
+    top:-40px;
+    left:42px;
+    p{
+      color: #fff;
+      font-size: 14px;
+    }
+    .tab {
+      display: flex;
+      div{
+        width: 118px;
+        height: 33px;
+        font-size: 16px;
+        text-align: center;
+        line-height: 33px;
+        background: url(../assets/images/devManager/tab.png);
+        background-size: 100% 100%;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}

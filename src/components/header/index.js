@@ -11,7 +11,7 @@ const number = 1000;
 export default () => {
   return (
     <div className="dashboard-container-header">
-      <div class="head-date">
+      <div className="head-date">
         {ticking()}
       </div>
       <div className="head-title">
