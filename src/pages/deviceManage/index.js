@@ -11,7 +11,7 @@ const history = createHashHistory();
 
 // eslint-disable-next-line complexity
 const Device = () => {
-  const [visible, setVisible] = useState('2');
+  const [visible, setVisible] = useState('1');
   return (
     <div className="layout-container">
       <Header />

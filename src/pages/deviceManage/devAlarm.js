@@ -1,7 +1,7 @@
 /* eslint-disable indent */
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { Select, DatePicker, Table } from 'antd';
+import { Select, DatePicker, Table, Button } from 'antd';
 import Tables from '@/components/table';
 const { Option, OptGroup } = Select;
 
@@ -104,6 +104,7 @@ const DevAlarm = () => {
             <span className="dev-search-select-title">报警结束时间</span>
             <input type="text" />
           </div>
+					<Button type="link" className="search">搜索</Button>
         </div>
 				<Tables />
       </div>
