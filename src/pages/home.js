@@ -1,13 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
-import { getUser } from '@/redux/actions';
+import { loginByUsername } from '@/redux/actions';
+import { createHashHistory } from 'history';
+import Header from '@/components/header';
 
-const Home = ({ user, onClick }) => {
+const history = createHashHistory();
+
+
+const dashboard = () => {
   return (
-    <>
-      <button onClick={onClick}>获取用户</button>
-      <div>{user.name}</div>
-    </>
+    <div className="dashboard-container">
+      <Header />
+      <div className="dashboard-container-content">
+        <div className="dashboard-container-content-textBox" onClick = {() => {
+          history.push('/DeviceManage');
+        }}><span>设备管理</span></div>
+        <div className="dashboard-container-content-textBox"><span>统计报表</span></div>
+        <div className="dashboard-container-content-textBox"><span>报警管理</span></div>
+        <div className="dashboard-container-content-textBox"><span>日志管理</span></div>
+        <div className="dashboard-container-content-textBox"><span>服务管理</span></div>
+        <div className="dashboard-container-content-textBox"><span>运维管理</span></div>
+        <div className="error-box">
+          <img src={require('../assets/images/dashboard/warning.png')} alt="" />
+          <p>设备报警信息实时推送区， 在当前访问页面的右下角自动弹出！</p>
+        </div>
+      </div>
+    </div>
   );
 };
 
@@ -19,10 +37,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onClick: () => {
-      dispatch(getUser());
-    }
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(dashboard);

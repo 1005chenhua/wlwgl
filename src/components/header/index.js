@@ -1,15 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { loginByUsername } from '@/redux/actions';
 import { createHashHistory } from 'history';
 import { Icon } from 'antd';
 
-
-export default ({ header }) => {
+const ticking = () => {
+  return (
+    <span>{new Date().toLocaleTimeString()}</span>
+  );
+};
+const number = 1000;
+// setInterval(ticking(), number);
+export default () => {
   return (
     <div className="dashboard-container-header">
       <div class="head-date">
-        <p>2019年11月11日 星期三 下午16：37</p>
+        {ticking()}
       </div>
       <div class="head-title">
         <h1>物联网管控平台</h1>
@@ -25,3 +31,4 @@ export default ({ header }) => {
     </div>
   );
 };
+
