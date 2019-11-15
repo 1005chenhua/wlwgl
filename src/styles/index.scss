@@ -181,7 +181,8 @@ font-size: 12px;
   border-left:1px solid rgba(7, 166, 255, 0.76);
 }
 .ant-table-thead > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td, .ant-table-tbody > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td, .ant-table-thead > tr:hover:not(.ant-table-expanded-row) > td, .ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td{
-  background-color: rgba(3,45,121,0.5) !important;
+  background-color: #07629F !important;
+  color: #00D8FF;
 }
 .ant-table-tbody tr:nth-child(2n+1){
   background: rgba(9,48,96,0.3);
@@ -193,6 +194,11 @@ font-size: 12px;
   border-bottom: 1px solid #6076AD;
   border-right: 1px solid #6076AD;
   color: #fff;
+  text-align: center;
+  span a{
+    width:32%;
+    margin-right: 3%;
+  }
 }
 .ant-table-tbody > tr > td:first-child{
   border-left: 1px solid #6076AD;
@@ -205,6 +211,7 @@ font-size: 12px;
   bottom: 50px;
   right: 58px;
 }
+// 分页
 .ant-table-pagination.ant-pagination li a{
   background: transparent;
   color: #fff;

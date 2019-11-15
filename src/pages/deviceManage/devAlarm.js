@@ -41,7 +41,44 @@ const DevAlarm = () => {
 
   const handleEndOpenChange = open => {
     // this.setState({ endOpen: open });
-  };
+	};
+	const columns = [
+    {
+      title: '报警资产类别',
+      dataIndex: 'type',
+      key: 'type',
+    },
+    {
+      title: '报警资产种类',
+      dataIndex: 'kind',
+      key: 'kind',
+    },
+    {
+      title: '资产编号',
+      dataIndex: 'numberNo',
+      key: 'numberNo',
+    },
+    {
+      title: '安装位置',
+      dataIndex: 'address',
+      key: 'address',
+    },
+    {
+      title: '发生时间',
+      dataIndex: 'startTime',
+      key: 'startTime',
+    },
+    {
+      title: '上报时间',
+      dataIndex: 'endTime',
+      key: 'endTime',
+    },
+    {
+      title: '报警内容',
+      dataIndex: 'content',
+      key: 'content',
+    },
+  ];
   return (
     <div className="devManage-container">
       <div className="devManage-container-left">
@@ -106,7 +143,7 @@ const DevAlarm = () => {
           </div>
 					<Button type="link" className="search">搜索</Button>
         </div>
-				<Tables />
+				<Tables columns={columns} />
       </div>
     </div>
   );

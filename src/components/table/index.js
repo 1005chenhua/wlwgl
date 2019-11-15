@@ -1,8 +1,13 @@
+/* eslint-disable semi */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { Table } from 'antd';
+import { Table, Divider } from 'antd';
+import _ from 'lodash';
+const { Column, ColumnGroup } = Table;
 
-export default () => {
-  const dataSource = [
+export default ({ columns }) => {
+  console.log(columns);
+  const data = [
     {
       key: '1',
       type: 'Mike',
@@ -44,45 +49,27 @@ export default () => {
       content: 'haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
     }
   ];
-
-  const columns = [
-    {
-      title: '报警资产类别',
-      dataIndex: 'type',
-      key: 'type',
-    },
-    {
-      title: '报警资产种类',
-      dataIndex: 'kind',
-      key: 'kind',
-    },
-    {
-      title: '资产编号',
-      dataIndex: 'numberNo',
-      key: 'numberNo',
-    },
-    {
-      title: '安装位置',
-      dataIndex: 'address',
-      key: 'address',
-    },
-    {
-      title: '发生时间',
-      dataIndex: 'startTime',
-      key: 'startTime',
-    },
-    {
-      title: '上报时间',
-      dataIndex: 'endTime',
-      key: 'endTime',
-    },
-    {
-      title: '报警内容',
-      dataIndex: 'content',
-      key: 'content',
-    },
-  ];
+  const deleteList = value => {
+    console.log(value);
+  };
   return (
-    <Table dataSource={dataSource} columns={columns} />
+    <Table dataSource={data}>
+      {
+        _.map(columns, item => (
+          <Column title={item.title} dataIndex={item.dataIndex} key={item.key} />
+        ))
+      }
+      <Column
+        title="操作"
+        key="action"
+        render={(text, record) => (
+          <span>
+            <a>远程操控</a>
+            <a>编辑</a>
+            <a onClick={() => { deleteList(record) }}>删除</a>
+          </span>
+        )}
+      />
+    </Table>
   );
 };
