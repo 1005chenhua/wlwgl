@@ -16,8 +16,12 @@ const dashboard = () => {
           history.push('/DeviceManage');
         }}><span>设备管理</span></div>
         <div className="dashboard-container-content-textBox"><span>统计报表</span></div>
-        <div className="dashboard-container-content-textBox"><span>报警管理</span></div>
-        <div className="dashboard-container-content-textBox"><span>日志管理</span></div>
+        <div className="dashboard-container-content-textBox" onClick = {() => {
+          history.push('/CallpoliceManage');
+        }}><span>报警管理</span></div>
+        <div className="dashboard-container-content-textBox" onClick = {() => {
+          history.push('/JournalManage');
+        }}><span>日志管理</span></div>
         <div className="dashboard-container-content-textBox"><span>服务管理</span></div>
         <div className="dashboard-container-content-textBox"><span>运维管理</span></div>
         <div className="error-box">

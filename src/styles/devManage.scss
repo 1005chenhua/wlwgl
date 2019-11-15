@@ -86,16 +86,36 @@
     background: url(../assets/images/content-bg.png);
     background-size: 100% 100%;
     padding: 24px 22px;
+    position: relative;
+    .ant-pagination {
+        position: absolute;
+        right: 30px;
+        bottom: 10px;
+    }
     &-top {
         width: 100%;
         height: 88px;
         padding-left: 8px;
         &-btn {
             .ant-btn {
-                background: #2778FC;
+                background:rgba(39,120,252,0.5);
                 color: #fff;
                 margin-right: 12px;
                 border-radius: 2px;
+                padding: 0 10px;
+                span {
+                    vertical-align: middle;
+                    margin-left: 6px;
+                }
+            }
+            .btnchange {
+                width: 36px;
+                height: 32px;
+                display: inline-block;
+                background:rgba(39,120,252,0.5);
+                border-radius: 2px;
+                padding: 4px 11px;
+                cursor: pointer;
             }
         }
         &-input {
@@ -199,11 +219,156 @@
         width: 50%;
         height: 100%;
         float: right;
-        div {
+        > div {
             width: 100%;
             height: 50%;
             background: url(../assets/images/detection-right-bg.png);
             background-size: 100% 100%;
+            .title-box {
+                color: #00D8FF;
+                padding: 30px 0 0 30px;
+                margin-bottom: 0;
+                span {
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    background: #00D8FF;
+                    margin-right: 12px;
+                    float: left;
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+}
+
+.minvalue {
+    .ant-progress-outer {
+        .ant-progress-inner {
+            .ant-progress-bg {
+                background:linear-gradient(90deg,rgba(254,102,71,1) 0%,rgba(249,68,53,1) 100%);
+            }
+        }
+    }
+}
+.centervalue {
+    .ant-progress-outer {
+        .ant-progress-inner {
+            .ant-progress-bg {
+                background:linear-gradient(90deg,rgba(12,168,225,1) 0%,rgba(254,196,71,1) 0%,rgba(249,154,53,1) 100%);
+            }
+        }
+    }
+}
+.maxvalue {
+    .ant-progress-outer {
+        .ant-progress-inner {
+            .ant-progress-bg {
+                background: linear-gradient(180deg,rgba(0,243,166,1) 0%,rgba(1,113,80,1) 100%);
+            }
+        }
+    }
+}
+
+
+// 日志管理
+.devicelog-container {
+    width: 100%;
+    height: 100%;
+    background: url(../assets/images/content-bg.png);
+    background-size: 100% 100%;
+    padding: 24px 22px;
+    .devicelog-container-top {
+        width: 100%;
+        display: flex;
+        padding: 10px 180px 50px;
+        .devicelog-container-top-box {
+            width: 33.33%;
+            height: 120px;
+            p {
+                color: #fff;
+                line-height: 45px;
+                text-align: center;
+            }
+            .devicelog-container-top-box-textBox {
+                width: 300px;
+                height: 60px;
+                background: url(../assets/images/Statistics-bg.png);
+                background-size: 100% 100%;
+                margin: 0 auto;
+                display: flex;
+                align-items:center;
+                justify-content:center;
+                span {
+                    font-size:26px;
+                    font-family:Nasa Display;
+                    font-weight:400;
+                    color:rgba(238,171,83,1);
+                }
+            }
+        }
+    }
+    .devicelog-container-bottom {
+        padding: 0 50px;
+        .details {
+            width: 100%;
+            height: 480px;
+            overflow: auto;
+            .details-box {
+                margin-left: 100px;
+                width: calc(100% - 100px);
+                border-left: 1px solid #032555;
+                position: relative;
+                &:before {
+                    content: '';
+                    width: 2px;
+                    height: 20px;
+                    display: inline-block;
+                    background: #000E34;
+                    position: absolute;
+                    left: -1px;
+                    top: 0;
+                }
+                .details-box-textBox {
+                    position: relative;
+                    .textBox-right {
+                        background: url(../assets/images/details-box-bg.png);
+                        background-size: 100% 100%;
+                        padding: 12px 20px;
+                        color: #fff;
+                        margin-left: 15px;
+                        margin-bottom: 20px;
+                    }
+                    .textBox-left {
+                        position: absolute;
+                        top: 0px;
+                        left: -86px;
+                        padding: 12px;
+                        text-align: right;
+                        p {
+                            margin: 0;
+                            color:rgba(13,167,227,0.8);
+                            font-size: 12px;
+                        }
+                        span {
+                            color: #fff;
+                            font-size: 13px;
+                        }
+                    }
+                    .textBox-left:before {
+                        content: '';
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background-color: #0DA7E3;
+                        display: inline-block;
+                        position: absolute;
+                        right: -4px;
+                        top: 18px;
+                    }
+                }
+            }
         }
     }
 }
