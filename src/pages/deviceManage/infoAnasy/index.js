@@ -67,7 +67,7 @@ export default ({ match }) => {
         <div className="inforAnasy-container">
           <div className="inforAnasy-container-top">
             <div className="inforAnasy-container-top-btn">
-              <Button type="link">添加设备</Button>
+              <Button type="link" onClick={() => history.push('/InfoAsyAdd')}>添加设备</Button>
               <Button type="link">批量导入</Button>
               <Button type="link">下载模板</Button>
               <Button type="link">导出EXCEL</Button>

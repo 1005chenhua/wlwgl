@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { Progress,Button,Pagination,Select } from 'antd';
 import _ from 'lodash';
 import { connect } from 'react-redux';
+import { createHashHistory } from 'history';
+
+const history = createHashHistory();
 const InfoAsyList = () => {
   const inforAnasyData = [
     { imgger: '',equipmenttype: '设备种类',equipmentname: '设备名称',equipment: 'MZ201911138001',online: '在线',address: '宿舍楼201',provalue: 30 },
@@ -20,7 +23,7 @@ const InfoAsyList = () => {
   return (
     <div className="inforAnasy-container-bottom">
       {
-        _.map(inforAnasyData, item => (<div className="inforAnasy-box">
+        _.map(inforAnasyData, item => (<div className="inforAnasy-box" onClick={() => history.push('/InfoAsyDetail')} style={{ cursor: 'pointer' }}>
           <div className="inforAnasy-box-left">
             <div className="inforAnasy-box-left-text">
               <div className="textBgBox">1</div>

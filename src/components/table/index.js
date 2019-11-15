@@ -53,7 +53,7 @@ export default ({ columns }) => {
     console.log(value);
   };
   return (
-    <Table dataSource={data}>
+    <Table dataSource={data} className="tableName">
       {
         _.map(columns, item => (
           <Column title={item.title} dataIndex={item.dataIndex} key={item.key} />
