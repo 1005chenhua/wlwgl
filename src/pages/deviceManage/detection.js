@@ -1,14 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createHashHistory } from 'history';
+import { getGauge,getLine } from '@/utils/echarts';
+import 'echarts/lib/chart/line';
+import 'echarts/lib/component/tooltip';
+import 'echarts/lib/component/title';
+import 'echarts/lib/component/legend';
+import 'echarts/lib/component/markPoint';
+
+import ReactEcharts from 'echarts-for-react';
+
 import _ from 'lodash';
 const history = createHashHistory();
-
-const totalData = [
-  { number: '123456',text: '设备总数' },
-  { number: '89%',text: '设备完好率' },
-  { number: '254',text: '告警中心' },
-];
 const detection = () => {
   return (
     <div className="detection-container">
@@ -16,8 +19,14 @@ const detection = () => {
           1
       </div>
       <div className="detection-container-right">
-        <div>1</div>
-        <div>1</div>
+        <div>
+          <p className="title-box"><span />各设备占比图</p>
+          <ReactEcharts option={getGauge()} />
+        </div>
+        <div>
+          <p className="title-box"><span />近七日设备报警统计</p>
+          <ReactEcharts option={getLine()} />
+        </div>
       </div>
     </div>
   );
