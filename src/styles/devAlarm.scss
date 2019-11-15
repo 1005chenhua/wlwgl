@@ -4,7 +4,9 @@
     &-select{
         width: 253px;
         height: 30px;
-        border: 1px solid #07A6FF;
+        // border: 1px solid #07A6FF;
+        background: url(../assets/images/input.png);
+        background-size: 100% 100%;
         border-radius: 2px;
         position: relative;
         margin-right: 20px;
@@ -13,7 +15,8 @@
             height: 30px;
             line-height: 30px;
             color: #fff;
-            background:rgba(7,166,255,0.3);
+            background: url(../assets/images/inputBtn.png);
+            background-size: 100% 100%;
             position: absolute;
             z-index: 999;
             text-align: center;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Progress,Button,Pagination,Select } from 'antd';
+import { Progress,Button,Pagination,Select,Icon } from 'antd';
 import { RouteList, asyncRoutes } from '@/router';
 import { createHashHistory } from 'history';
 import Header from '@/components/header';
@@ -67,14 +67,19 @@ export default ({ match }) => {
         <div className="inforAnasy-container">
           <div className="inforAnasy-container-top">
             <div className="inforAnasy-container-top-btn">
-              <Button type="link">添加设备</Button>
-              <Button type="link">批量导入</Button>
-              <Button type="link">下载模板</Button>
-              <Button type="link">导出EXCEL</Button>
-              <Button type="link">导出二维码</Button>
-              <Button type="link" onClick={() => {
+              <Button type="link">
+                <img src={require('../../../assets/images/add.png')} alt="" />
+                添加设备
+              </Button>
+              <Button type="link"><img src={require('../../../assets/images/import.png')} alt="" />批量导入</Button>
+              <Button type="link"><img src={require('../../../assets/images/download.png')} alt="" />下载模板</Button>
+              <Button type="link"><img src={require('../../../assets/images/add.png')} alt="" />导出EXCEL</Button>
+              <Button type="link"><img src={require('../../../assets/images/importcode.png')} alt="" />导出二维码</Button>
+              <span className="btnchange" onClick={() => {
                 setVisible(!visible);
-              }}>切换</Button>
+              }}>
+                <img src={require('../../../assets/images/change.png')} alt="" />
+              </span>
             </div>
             <div className="inforAnasy-container-top-input dev-search">
               <div className="dev-search-select">

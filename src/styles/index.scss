@@ -212,11 +212,88 @@ font-size: 12px;
   right: 58px;
 }
 // 分页
-.ant-table-pagination.ant-pagination li a{
+.ant-table-pagination .ant-pagination li a {
   background: transparent;
   color: #fff;
   border-color: #1890ff;
 }
+.ant-pagination {
+  li {
+    border: none;
+    background: #05254B;
+    border-radius: 3px;
+    a {
+      background: #05254B;
+      border-radius: 3px;
+      color: #8489A8;
+      border-color: none;
+    }
+  }
+}
+
+.ant-pagination-disabled a, .ant-pagination-disabled:hover a, .ant-pagination-disabled:focus a, .ant-pagination-disabled .ant-pagination-item-link, .ant-pagination-disabled:hover .ant-pagination-item-link, .ant-pagination-disabled:focus .ant-pagination-item-link {
+  color: #8489A8;
+  // background: #05254B;
+  background: url(../assets/images/pagination-bg.png);
+  border-color: none !important;
+}
+.ant-pagination-prev .ant-pagination-item-link, .ant-pagination-next .ant-pagination-item-link {
+  color: #8489A8;
+  // background: #05254B;
+  background: url(../assets/images/pagination-bg.png);
+  border-color: none !important;
+}
+.ant-pagination-item-link {
+  border: none !important;
+  background: url(../assets/images/pagination-bg.png);
+  background-size: 100% 100%;
+  
+}
 .ant-pagination-item-active{
   background-color: rgba(3,45,121,0.5) !important;
+  background: url(../assets/images/pagination-active.png);
+  border-color: none !important;
+}
+
+// 滚动条
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+*::-webkit-scrollbar-track,
+*::-webkit-scrollbar-thumb {
+  border: 0px solid transparent;
+}
+*::-webkit-scrollbar-track {
+  background-color: #052f60;
+}
+*::-webkit-scrollbar-thumb {
+  background-clip: content-box;
+  background-color: #135290;
+}
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+// 自定义 antd select 样式
+.ant-select-dropdown-menu,
+.ant-dropdown-menu  {
+  border: none;
+  background: url(../assets/images/headerSelect-bg.png);
+  background-size: 100% 100%;
+  left: -20px !important;
+  top: 5px;
+}
+.ant-select-dropdown-menu-item {
+  color: #fff;
+  font-weight: 600;
+}
+.ant-dropdown-menu-item span {
+  padding: 6px 20px;
+}
+.ant-dropdown-menu-item:hover,
+.ant-dropdown-menu-item:hover a {
+  background-color: transparent;
+  color: #0393FF;
+  font-weight: bolder;
 }

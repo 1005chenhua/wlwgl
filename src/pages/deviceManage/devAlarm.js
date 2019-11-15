@@ -87,7 +87,7 @@ const DevAlarm = () => {
             <span>123456</span>
           </div>
           <div className="box-text">
-            <span>设备总数</span>
+            <span>今日报警次数</span>
           </div>
         </div>
         <div className="dev-con-left-box">
@@ -95,7 +95,7 @@ const DevAlarm = () => {
             <span>123456</span>
           </div>
           <div className="box-text">
-            <span>设备总数</span>
+            <span>近一周报警次数</span>
           </div>
         </div>
         <div className="dev-con-left-box">
@@ -103,7 +103,7 @@ const DevAlarm = () => {
             <span>123456</span>
           </div>
           <div className="box-text">
-            <span>设备总数</span>
+            <span>近30天报警次数</span>
           </div>
         </div>
       </div>
