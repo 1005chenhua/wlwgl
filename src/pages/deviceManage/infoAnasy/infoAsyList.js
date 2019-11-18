@@ -24,7 +24,7 @@ const InfoAsyList = () => {
     <div className="inforAnasy-container-bottom">
       {
         // eslint-disable-next-line complexity
-        _.map(inforAnasyData, item => (<div className="inforAnasy-box">
+        _.map(inforAnasyData, item => (<div className="inforAnasy-box" style={{ cursor: 'pointer' }} onClick={() => history.push('/InfoAsyDetail')}>
           <div className="inforAnasy-box-left">
             <div className="inforAnasy-box-left-text">
               <div className="textBgBox">1</div>
