@@ -6,6 +6,10 @@ import { connect } from 'react-redux';
 import Header from '@/components/header';
 import _ from 'lodash';
 import Item from 'antd/lib/list/Item';
+import locale from 'antd/lib/date-picker/locale/zh_CN';
+import moment from 'moment';
+import 'moment/locale/zh-cn';
+moment.locale('zh-cn');
 
 const { Column } = Table;
 const { Option } = Select;
@@ -61,46 +65,34 @@ const InfoAsyDetail = () => {
   };
   const options = [
     {
-      value: 'zhejiang',
-      label: 'Zhejiang',
+      value: '1',
+      label: '下拉选项1',
       children: [
         {
-          value: 'hangzhou',
-          label: 'Hangzhou'
+          value: '11',
+          label: '子选项1'
         }
       ],
     },
     {
-      value: 'jiangsu',
-      label: 'Jiangsu',
+      value: '2',
+      label: '下拉选项2',
       children: [
         {
-          value: 'nanjing',
-          label: 'Nanjing'
+          value: '22',
+          label: '子选项1'
         }
       ],
     },
     {
-      value: 'hahhahah',
-      label: 'hahahahha'
+      value: '3',
+      label: '下拉选项3'
     },
   ];
-  function handleAreaClick(e, label, option) {
-    e.stopPropagation();
-    console.log('clicked', label, option);
+  function handleAreaClick(e, label) {
+    // e.stopPropagation();
+    console.log('clicked', label);
   }
-  const displayRender = (labels, selectedOptions) =>
-    labels.map((label, i) => {
-      const option = selectedOptions[i];
-      if (i === labels.length - 1) {
-        return (
-          <span key={option.value}>
-            {label} (<a onClick={e => handleAreaClick(e, label, option)}>{option.code}</a>)
-          </span>
-        );
-      }
-      return <span key={option.value}>{label} / </span>;
-    });
   return (
     <div className="infoAsyDetail-container layout-container">
       <Header />
@@ -234,10 +226,12 @@ const InfoAsyDetail = () => {
               <div className="other typeName">
                 <span className="start">安装位置</span>
                 <Cascader
+                  locale={locale}
                   options={options}
-                  defaultValue={['zhejiang', 'hangzhou', 'xihu']}
-                  displayRender={displayRender}
+                  // defaultValue={'请选择'}
+                  // displayRender={displayRender}
                   style={{ width: '100%' }}
+                  onChange={ handleAreaClick }
                 />
               </div>
               <div className="other typeName">
