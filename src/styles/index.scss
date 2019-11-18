@@ -5,6 +5,9 @@
 @import './devAlarm.scss';
 @import './infoAsyDetails.scss';
 @import './InfoAsyAdd.scss';
+@import './journalManage.scss';
+@import './detection.scss';
+@import './infoAsy.scss';
 @import './NasaDisplay.ttf';
 
 $fullHeight: 100vh;
@@ -283,8 +286,8 @@ font-size: 12px;
 }
 
 // 自定义 antd select 样式
-.ant-select-dropdown-menu,
-.ant-dropdown-menu  {
+.ant-dropdown .ant-select-dropdown-menu,
+.ant-dropdown .ant-dropdown-menu  {
   border: none;
   background: url(../assets/images/headerSelect-bg.png);
   background-size: 100% 100%;
