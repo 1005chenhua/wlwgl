@@ -1,0 +1,124 @@
+@mixin start_comm{
+    display: inline-block;
+    color: #fff;
+    margin-right: 5%;
+    text-align: right;
+    float: left;
+    line-height: 30px;
+    i{
+      color: red;
+      margin-right: 15px;
+    }
+}
+@mixin input_comm{
+    width:200px;
+    height:30px;
+    float: left;
+    background: transparent;
+    border-radius: 4px; 
+    color: #00CBFF;
+}
+.inforAnasy-container{
+    &-add{
+        .pictor{
+            .editor{
+                height: 291px;
+                background: url(../assets/images/devManager/editor1.png) !important;
+                background-size: 100% 100%;
+                padding: 0 !important;
+                border: none;
+            }
+        }
+        .baseInfo{
+            padding:0 100px 29px 80px;
+            .typeName{
+                margin-bottom: 12px;
+                overflow: hidden;
+                .start{
+                    width: 32%;
+                    @include start_comm();
+                }
+                .ant-select{
+                    width:289px;
+                    height:30px;
+                    &-selection-selected-value{
+                        padding-left: 100px;
+                        color: #fff;
+                    }
+                    &-selection--single{
+                        background: transparent;
+                        height: 100% !important;
+                        border:1px solid rgba(7, 166, 255, 0.76);
+                    }
+                    .ant-select-arrow .ant-select-arrow-icon svg{
+                        color: #fff;
+                    }
+                    &-selection-selected-value{
+                        padding-left: 0;
+                    }
+                }
+                input{
+                    border:1px solid rgba(7, 166, 255, 0.76);
+                    @include input_comm();
+                }
+            }
+        }
+        .other{
+            margin-bottom: 10px;
+            div{
+                .start{
+                    @include start_comm();
+                }
+                .ant-radio-wrapper{
+                    line-height: 30px;
+                    color: #fff;
+                }
+                .ant-radio-inner{
+                    background: transparent;
+                    border-color: #07A6FF;
+                }
+            }
+            .start{
+                float: left;
+                color: #fff;
+                font-size: 14px;
+                margin-right: 10px;
+                line-height: 30px;
+                i{
+                    margin-right: 5px !important;
+                }
+            }
+            input{
+                width: 288px !important;
+                @include input_comm();
+                float: left;
+                border:1px solid rgba(144, 145, 145, 0.76);
+            }
+            .ant-cascader-picker{
+                width: 288px !important;
+                height: 30px;
+                background: transparent;
+            }
+        }
+    }
+    &-operate{
+        width: 252px;
+        margin: auto;
+        margin-top: 10px;
+        .ant-btn-link{
+            width: 126px;
+            height: 40px;
+            font-size: 16px;
+        }
+        .sure{
+            background: url(../assets/images/devManager/sure.png);
+            background-size: 100% 100%;
+            color: #00CBFF;
+        }
+        .cancel{
+            background: url(../assets/images/devManager/cancel.png);
+            background-size: 100% 100%;
+            color:rgba(194,231,255,1);
+        }
+    }
+}

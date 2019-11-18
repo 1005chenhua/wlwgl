@@ -1,0 +1,85 @@
+.inforAnasy-container{
+    &-comm{
+        width: 33%;
+        height: 100%;
+        margin-right: 0.5%;
+        background: url(../assets/images/devManager/editor.png);
+        background-size: 100% 100%;
+        padding: 30px 36px;
+        .name{
+          width:194px;
+          height:29px;
+          line-height: 29px;
+          font-size:14px;
+          background:linear-gradient(90deg,rgba(7,166,255,1) 0%,rgba(7,166,255,0) 100%);
+          color: #FEFEFE;
+          position: relative;
+          padding-left: 31px;
+          margin-left: -30px;
+        }
+        .name:before{
+          content:"";
+          position: absolute;
+          width:8px;
+          height:8px;
+          background:#fff;
+          border-radius:50%;
+          left: 13px;
+          top: 11px;
+        }
+        .ant-table-thead > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td, .ant-table-tbody > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td, .ant-table-thead > tr:hover:not(.ant-table-expanded-row) > td, .ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td{
+          background-color: transparent !important;
+          color: #fff;
+        }
+        .ant-table-tbody tr:first-child td:first-child,.ant-table-tbody tr:first-child td:last-child{
+          border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .ant-table-tbody tr:nth-child(2n+1){
+          background:rgba(24,57,112,1);
+        }
+        .ant-table-tbody tr:nth-child(2n){
+            background:rgba(9,48,96,1);
+
+        } 
+        .ant-table-tbody tr td:first-child{
+          color:rgba(255,255,255,0.5);
+          font-size:14px;
+          text-align: right;
+          width: 23%;
+        }
+        .ant-table-tbody tr td:last-child{
+          text-align: left;
+          font-size: 14px;
+        }
+        .ant-table-thead > tr > th, .ant-table-tbody > tr > td{
+          padding: 12.5px 16px;
+        }
+        .pictor{
+            padding:5px 0 0 29px;
+            margin-bottom: 38px;
+            &-onload{
+               p{
+                   color: #fff;
+                   margin-bottom: 5px;
+               }
+            }
+            img{
+                width: 152.6px;
+                height: 152.6px;
+                cursor: pointer;
+            }
+            .test{
+                width:475px;
+                height:220px;
+                padding: 20px 31px 20px 19px;
+                font-size:14px;
+                color: #fff;
+                background:rgba(9,48,96,0.4);
+                border:1px solid rgba(255, 255, 255, 0.1);
+            }
+        }
+    }
+    &-right{
+        margin-right: 0;
+    }
+}

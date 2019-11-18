@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { Progress,Button,Pagination,Select } from 'antd';
 import _ from 'lodash';
 import { connect } from 'react-redux';
+import { createHashHistory } from 'history';
+
+const history = createHashHistory();
 const InfoAsyList = () => {
   const inforAnasyData = [
     { imgger: '',equipmenttype: '设备种类',equipmentname: '设备名称',equipment: 'MZ201911138001',online: '在线',address: '宿舍楼201',provalue: 30 },
