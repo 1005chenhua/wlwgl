@@ -67,8 +67,8 @@ export default ({ match }) => {
         <div className="inforAnasy-container">
           <div className="inforAnasy-container-top">
             <div className="inforAnasy-container-top-btn">
-              <Button type="link">
-                <img src={require('../../../assets/images/add.png')} alt="" onClick={() => history.push('/InfoAsyAdd')} />
+              <Button type="link" onClick={() => history.push('/InfoAsyAdd')} >
+                <img src={require('../../../assets/images/add.png')} alt="" />
                 添加设备
               </Button>
               <Button type="link"><img src={require('../../../assets/images/import.png')} alt="" />批量导入</Button>

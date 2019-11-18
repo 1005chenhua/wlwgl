@@ -44,12 +44,16 @@
             padding-left: 102px;
             background: transparent;
             border: none;
+            cursor: pointer;
         }
         .ant-calendar-picker{
             .anticon svg{
                 color: #fff;
             }
-        }  
+        }
+        .ant-calendar-picker-clear:hover{
+            // display: none;
+        } 
     }
     .search{
         width:90px;
