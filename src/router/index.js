@@ -11,6 +11,8 @@ import LoginPage from '@/pages/loginPage';
 import ServiceSelect from '@/pages/serviceSelect';
 import InfoAnasy from '@/pages/deviceManage/infoAnasy/index';
 import DeviceManage from '@/pages/deviceManage';
+import CallpoliceManage from '@/pages/callpoliceManage';
+import JournalManage from '@/pages/JournalManage';
 import Page404 from '@/pages/page404';
 import InfoAsyDetail from '@/pages/deviceManage/infoAnasy/infoAsyDetails';
 import InfoAsyAdd from '@/pages/deviceManage/infoAnasy/infoAsyAdd';
@@ -50,6 +52,8 @@ export default () => (
       <AuthRoute exact path="/login" authTo="/" component={LoginPage} />
       <Route exact path="/Home" component={Home} />
       <Route exact path="/DeviceManage" component={DeviceManage} />
+      <Route exact path="/CallpoliceManage" component={CallpoliceManage} />
+      <Route exact path="/JournalManage" component={JournalManage} />
       <Route exact path="/InfoAnasy" component={InfoAnasy} />
       <Route exact path="/InfoAsyDetail" component={InfoAsyDetail} />
       <Route exact path="/InfoAsyAdd" component={InfoAsyAdd} />
