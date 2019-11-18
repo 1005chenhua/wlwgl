@@ -301,9 +301,15 @@ font-size: 12px;
 }
 
 //日历
+.ant-calendar-picker-clear{
+  background: transparent !important;
+}
 .ant-calendar-picker-clear:hover{
-  //display: none;
+  color: rgb(0,0,0) !important;
 }
 .ant-calendar{
   width: 248px !important;
+}
+.dev-search-select .ant-calendar-picker .anticon svg{
+  
 }
