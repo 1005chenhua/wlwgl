@@ -7,11 +7,14 @@ import { getToken } from '@/utils/auth';
 const authRoute = ({ component: Component, authTo, user, getUserByToken, ...rest }) => (
   // eslint-disable-next-line complexity
   <Route {...rest} render={props => {
-    console.log('111111111');
+    console.log('111111111', props.match.path);
+    console.log('props.location', props.location);
     const isLogin = props.match.path === '/login';
     const token = getToken();
+    console.log(token);
+    console.log(user);
     const c = <Component {...props} />;
-    const r = <Redirect to={{ pathname: authTo, state: { from: props.location } }} />;
+    const r = <Redirect to={{ pathname: authTo, state: { from: props.location.pathname } }} />;
     if (token) {
       // 如果有token 判断有没有用户信息没有就去拉取
       if (!user.id) {
