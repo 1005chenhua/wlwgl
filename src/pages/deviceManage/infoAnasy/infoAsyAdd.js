@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable implicit-arrow-linebreak */
 import React, { useState } from 'react';
-import { Table, Button, Select, Radio, Cascader } from 'antd';
+import { Table, Button, Select, Radio, Cascader,Input,LocaleProvider } from 'antd';
 import { connect } from 'react-redux';
 import Header from '@/components/header';
 import _ from 'lodash';
@@ -13,8 +13,11 @@ moment.locale('zh-cn');
 
 const { Column } = Table;
 const { Option } = Select;
+const { TextArea } = Input;
 const InfoAsyDetail = () => {
   const [val,setValue] = useState('1');
+  const [textAreaLgn, setTextAreaLgn] = useState(0);
+  const [mtop,setmtop] = useState('0');
   const data = [
     {
       id: 0,
@@ -87,12 +90,20 @@ const InfoAsyDetail = () => {
     {
       value: '3',
       label: '下拉选项3'
-    },
+    }
   ];
   function handleAreaClick(e, label) {
     // e.stopPropagation();
+    setTimeout(() => {
+      setmtop(0);
+    }, 200);
     console.log('clicked', label);
   }
+  const TextAreaOnChange = (e) => {
+    // this.setState({ value });
+    console.log(e.target.value.length);
+    setTextAreaLgn(e.target.value.length);
+  };
   return (
     <div className="infoAsyDetail-container layout-container">
       <Header />
@@ -131,19 +142,19 @@ const InfoAsyDetail = () => {
                 </div>
                 <div className="typeName">
                   <span className="start"><i>*</i>序列号</span>
-                  <input type="text" />
+                  <input type="text" placeholder="请输入系列号" />
                 </div>
                 <div className="typeName">
                   <span className="start">型 号</span>
-                  <input type="text" />
+                  <input type="text" placeholder="请输入型号" />
                 </div>
                 <div className="typeName">
                   <span className="start">规 格</span>
-                  <input type="text" />
+                  <input type="text" placeholder="请输入规格" />
                 </div>
                 <div className="typeName">
                   <span className="start">生产单位</span>
-                  <input type="text" />
+                  <input type="text" placeholder="请输入生产单位" />
                 </div>
                 <div className="typeName">
                   <span className="start">生产日期</span>
@@ -155,7 +166,7 @@ const InfoAsyDetail = () => {
                 </div>
                 <div className="typeName">
                   <span className="start">供货单位</span>
-                  <input type="text" />
+                  <input type="text" placeholder="请输入供货单位" />
                 </div>
                 <div className="typeName">
                   <span className="start">采购日期</span>
@@ -167,7 +178,7 @@ const InfoAsyDetail = () => {
                 </div>
                 <div className="typeName">
                   <span className="start">维护周期</span>
-                  <input type="text" />
+                  <input type="text" placeholder="请输入维护周期" />
                 </div>
                 <div className="typeName">
                   <span className="start">使用部门</span>
@@ -179,11 +190,11 @@ const InfoAsyDetail = () => {
                 </div>
                 <div className="typeName">
                   <span className="start">使用年限</span>
-                  <input type="text" />
+                  <input type="text" placeholder="请输入使用年限" />
                 </div>
                 <div className="typeName">
                   <span className="start">使用负责人</span>
-                  <input type="text" />
+                  <input type="text" placeholder="请输入使用负责人" />
                 </div>
                 <div className="typeName">
                   <span className="start">投入使用日期</span>
@@ -209,7 +220,14 @@ const InfoAsyDetail = () => {
                 <div className="pictor-onload">
                   <p style={{ textIndent: '5px' }}>备注</p>
                 </div>
-                <div className="test editor">11</div>
+                <div className="test editor">
+                  <TextArea
+                    onChange={TextAreaOnChange}
+                    placeholder="请输入备注"
+                    autoSize={{ minRows: 3, maxRows: 5 }}
+                  />
+                  <span className="total">{textAreaLgn}/500</span>
+                </div>
               </div>
             </div>
             <div className="inforAnasy-container-right inforAnasy-container-comm inforAnasy-container-add">
@@ -229,14 +247,19 @@ const InfoAsyDetail = () => {
                   locale={locale}
                   options={options}
                   // defaultValue={'请选择'}
+                  placeholder="请选择"
                   // displayRender={displayRender}
                   style={{ width: '100%' }}
                   onChange={ handleAreaClick }
+                  onClick={() => {
+                    console.log(document.querySelectorAll('.ant-cascader-menu'));
+                    setmtop(180);
+                  }}
                 />
               </div>
-              <div className="other typeName">
+              <div className="other typeName" style={{ marginTop: mtop }}>
                 <span className="start">详细位置</span>
-                <input type="text" />
+                <input type="text" placeholder="请输入" style={{ paddingLeft: '10px' }} />
               </div>
             </div>
           </div>

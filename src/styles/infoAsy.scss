@@ -1,0 +1,149 @@
+// 采集分析
+.inforAnasy-container {
+    width: 100%;
+    height: 100%;
+    background: url(../assets/images/content-bg.png);
+    background-size: 100% 100%;
+    padding: 24px 22px;
+    position: relative;
+    .ant-pagination {
+        position: absolute;
+        right: 30px;
+        bottom: 10px;
+    }
+    &-top {
+        width: 100%;
+        height: 88px;
+        padding-left: 8px;
+        &-btn {
+            .ant-btn {
+                background:rgba(39,120,252,0.5);
+                color: #fff;
+                margin-right: 12px;
+                border-radius: 2px;
+                padding: 0 10px;
+                span {
+                    vertical-align: middle;
+                    margin-left: 6px;
+                }
+            }
+            .btnchange {
+                width: 36px;
+                height: 32px;
+                display: inline-block;
+                background:rgba(39,120,252,0.5);
+                border-radius: 2px;
+                padding: 4px 11px;
+                cursor: pointer;
+            }
+        }
+        &-input {
+            display: flex;
+            padding: 12px 0;
+        }
+    }
+    &-bottom {
+        height: calc(100% - 88px);
+        .inforAnasy-box {
+            width: 24%;
+            height: 200px;
+            margin: 0 0.5% 18px;
+            float: left;
+            background: url(../assets/images/InfoAnasy-bg.png);
+            background-size: 100% 100%;
+            padding: 16px;
+            display: flex;
+            &-left {
+                width: 80%;
+                height: 100%;
+                &-text {
+                    height: 128px;
+                    width: 100%;
+                    display: flex;
+                    .textBgBox {
+                        width: 128px;
+                        height: 128px;
+                        background: #0D3561;
+                        border: 1px solid #42B3E3;
+                    }
+                    .textTextBox {
+                        width: calc(100% - 138px);
+                        padding: 0 20px;
+                        color: #fff;
+                        span {
+                            display: block;
+                            margin-bottom: 6px;
+                        }
+                    }
+                }
+                &-btn {
+                    padding-top: 10px;
+                    .ant-btn {
+                        width: 82px;
+                        height: 33px;
+                        background: url(../assets/images/InfoAnasyBtn-bg.png);
+                        background-size: 100% 100%;
+                        border: none;
+                        margin-right: 12px;
+                        color: #FFF;
+                    }
+                }
+            }
+            &-right {
+                width: 20%;
+                height: 100%;
+                position: relative;
+                .ant-progress-line {
+                    transform: rotate(-90deg);
+                    width: 135px;
+                    position: absolute;
+                    top: 66px;
+                    right: -26px;
+                    .ant-progress-inner {
+                        height: 12px;
+                        .ant-progress-bg {
+                            height: 12px !important;
+                        }
+                    }
+                }
+                span {
+                    position: absolute;
+                    bottom: 0;
+                    left: 12px;
+                    color: #fff;
+                }
+            }
+            &:nth-child(3n) {
+                margin-bottom: 12px;
+            }
+        }
+    }
+}
+
+.minvalue {
+    .ant-progress-outer {
+        .ant-progress-inner {
+            .ant-progress-bg {
+                background:linear-gradient(90deg,rgba(254,102,71,1) 0%,rgba(249,68,53,1) 100%);
+            }
+        }
+    }
+}
+.centervalue {
+    .ant-progress-outer {
+        .ant-progress-inner {
+            .ant-progress-bg {
+                background:linear-gradient(90deg,rgba(12,168,225,1) 0%,rgba(254,196,71,1) 0%,rgba(249,154,53,1) 100%);
+            }
+        }
+    }
+}
+.maxvalue {
+    .ant-progress-outer {
+        .ant-progress-inner {
+            .ant-progress-bg {
+                background: linear-gradient(180deg,rgba(0,243,166,1) 0%,rgba(1,113,80,1) 100%);
+            }
+        }
+    }
+}
