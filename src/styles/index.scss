@@ -5,8 +5,12 @@
 @import './devAlarm.scss';
 @import './infoAsyDetails.scss';
 @import './InfoAsyAdd.scss';
+@import './NasaDisplay.ttf';
+
 $fullHeight: 100vh;
 $headerHight: 100px;
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -53,6 +57,7 @@ body {
       color:rgba(255,255,255,1);
       h1 {
           color: #fff;
+          font-family: fontNameRegular;
       }
   }
   .head-container-tools {
