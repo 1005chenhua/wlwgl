@@ -15,7 +15,9 @@ const dashboard = () => {
         <div className="dashboard-container-content-textBox" onClick = {() => {
           history.push('/DeviceManage');
         }}><span>设备管理</span></div>
-        <div className="dashboard-container-content-textBox"><span>统计报表</span></div>
+        <div className="dashboard-container-content-textBox" onClick = {() => {
+          history.push('/Statistics');
+        }}><span>统计报表</span></div>
         <div className="dashboard-container-content-textBox" onClick = {() => {
           history.push('/CallpoliceManage');
         }}><span>报警管理</span></div>

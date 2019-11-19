@@ -14,7 +14,7 @@ const store = createStore(appStore, applyMiddleware(thunk));
 ReactDOM.render(
   <Provider store ={store}>
     <App />
-    <Warning />
+    {/* <Warning /> */}
   </Provider>,
   document.getElementById('root')
 );
