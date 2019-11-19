@@ -17,6 +17,8 @@
     background: transparent;
     border-radius: 4px; 
     color: #00CBFF;
+    background: url(../assets/images/input.png) !important;
+    background-size: 100% 100% !important;
 }
 .inforAnasy-container{
     &-add{
@@ -54,6 +56,8 @@
                 .ant-select{
                     width:289px;
                     height:30px;
+                    background: url(../assets/images/input.png) !important;
+                    background-size: 100% 100% !important;
                     &-selection-selected-value{
                         padding-left: 100px;
                         color: #00CBFF;
@@ -110,8 +114,6 @@
                 @include input_comm();
                 float: left;
                 border: none;
-                background: url(../assets/images/input.png) !important;
-                background-size: 100% 100% !important;
                 &::-webkit-input-placeholder {
                     color: #fff;
                 } 
@@ -169,4 +171,15 @@
 }
 .ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled), .ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled):hover {
     background:rgba(16,31,72,0.1);
+}
+.anticon svg{
+    color: #fff;
+}
+.ant-cascader-picker-clear:hover{
+    color: rgb(0, 0, 0);
+    background: transparent;
+}
+.inforAnasy-container-add .other input:hover .ant-cascader-picker-clear{
+    color: rgb(0, 0, 0);
+    background: transparent;
 }
