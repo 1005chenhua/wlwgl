@@ -24,15 +24,53 @@
                 line-height: 46px;
                 background: url(../assets/images/infostatic/content-bg.png);
                 background-size: 100% 100%;
-                padding-left: 60px;
-                color: #FF9100;
+                padding-left: 55px;
+                color: #B3E3FE;
                 font-size: 15px;
                 margin-top: 42px;
             }
         }
     }
     .inforStatic-container-right {
-        width: calc(100% - 282px);
+        width: 100%;
         height: 100%;
+        display: flex;
+        padding-left: 3%;
+        position: relative;
+        .portrait-box {
+            width: 55%;
+            padding-top: 40px;
+        }
+        .textBox {
+            width: 10%;
+            padding-top: 20%;
+            p {
+                width: 240px;
+                color: #6FE6F4;
+                margin-left: -35px;
+                margin-top: 10px;
+            }
+        }
+        .collection-box {
+            width: 40%;
+            padding: 40px 20px;
+            .collection-box-cencus {
+                width: 411px;
+                height: 411px;
+                border: 1px solid #6FE6F4;
+            }
+        }
+        .change-box {
+            width: 43px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background:rgba(39,120,252,0.5);
+            border-radius: 2px;
+            cursor: pointer;
+        }
     }
 }
