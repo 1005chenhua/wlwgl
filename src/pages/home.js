@@ -24,10 +24,6 @@ const dashboard = () => {
         }}><span>日志管理</span></div>
         <div className="dashboard-container-content-textBox"><span>服务管理</span></div>
         <div className="dashboard-container-content-textBox"><span>运维管理</span></div>
-        <div className="error-box">
-          <img src={require('../assets/images/dashboard/warning.png')} alt="" />
-          <p>设备报警信息实时推送区， 在当前访问页面的右下角自动弹出！</p>
-        </div>
       </div>
     </div>
   );
