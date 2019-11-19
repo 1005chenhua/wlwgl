@@ -17,6 +17,7 @@ import Statistics from '@/pages/statistics'; // 日志管理
 import Page404 from '@/pages/page404';
 import InfoAsyDetail from '@/pages/deviceManage/infoAnasy/infoAsyDetails';
 import InfoAsyAdd from '@/pages/deviceManage/infoAnasy/infoAsyAdd';
+import SignDetail from '@/pages/statistics/vitalSigns/signDetail';
 
 import {
   flatTree
@@ -59,6 +60,7 @@ export default () => (
       <Route exact path="/InfoAsyDetail" component={InfoAsyDetail} />
       <Route exact path="/InfoAsyAdd" component={InfoAsyAdd} />
       <Route exact path="/Statistics" component={Statistics} />
+      <Route exact path="/SignDetail" component={SignDetail} />
       <AuthRoute path="/jd" authTo="/login" component={DeviceManage} />
       <Redirect from="/" to="/Home" />
       <Route component={Page404} />

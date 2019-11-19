@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { createHashHistory } from 'history';
 import { Select,Button,DatePicker } from 'antd';
-import ArticeCencus from './articleInfo/graphCencus';
+import ArticeCencus from './vitalSigns/graphCencus';
 
 import _ from 'lodash';
 const { Option } = Select;
