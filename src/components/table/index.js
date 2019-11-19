@@ -3,10 +3,14 @@
 import React from 'react';
 import { Table, Divider } from 'antd';
 import _ from 'lodash';
+import { tsConstructorType } from '@babel/types';
 const { Column, ColumnGroup } = Table;
 
-export default ({ columns }) => {
-  console.log(columns);
+export default ({ columns, handleControl = false }) => {
+  // constructor(props){
+
+  // }
+  console.log(columns,handleControl,13);
   const data = [
     {
       key: '1',
@@ -59,17 +63,18 @@ export default ({ columns }) => {
           <Column title={item.title} dataIndex={item.dataIndex} key={item.key} />
         ))
       }
-      <Column
+      { handleControl && <Column // handleControl为true显示column
         title="操作"
         key="action"
         render={(text, record) => (
           <span>
             <a>远程操控</a>
+            <a>详情</a>
             <a>编辑</a>
             <a onClick={() => { deleteList(record) }}>删除</a>
           </span>
         )}
-      />
+      />}
     </Table>
   );
 };

@@ -2,7 +2,7 @@
 /* eslint-disable indent */
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { Select, DatePicker, Table, Button, LocaleProvider } from 'antd';
+import { Select, DatePicker, Button } from 'antd';
 import Tables from '@/components/table';
 import locale from 'antd/lib/date-picker/locale/zh_CN';
 import moment from 'moment';

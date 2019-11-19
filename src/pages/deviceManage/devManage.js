@@ -5,18 +5,18 @@ import _ from 'lodash';
 const history = createHashHistory();
 
 const devData = [
-  { text: '位置采集设备',total: '300',intactrate: '80%',alarm: '25条' },
-  { text: '生命体征采集设备',total: '300',intactrate: '80%',alarm: '25条' },
-  { text: '运动康复设备',total: '300',intactrate: '80%',alarm: '25条' },
-  { text: '物品信息采集设备',total: '300',intactrate: '80%',alarm: '25条' },
-  { text: '戒毒医疗设备',total: '300',intactrate: '80%',alarm: '25条' },
-  { text: '环境信息采集设备',total: '300',intactrate: '80%',alarm: '25条' },
-  { text: '资源消耗计量设备',total: '300',intactrate: '80%',alarm: '25条' },
-  { text: '智能交互终端',total: '300',intactrate: '80%',alarm: '25条' },
-  { text: '无线通讯设备',total: '300',intactrate: '80%',alarm: '25条' },
-  { text: '电平量开关量控制设备',total: '300',intactrate: '80%',alarm: '25条' },
-  { text: '监控摄像设备',total: '300',intactrate: '80%',alarm: '25条' },
-  { text: '教育矫正设备',total: '300',intactrate: '80%',alarm: '25条' }
+  { id: 1,text: '位置采集设备',total: '300',intactrate: '80%',alarm: '25条' },
+  { id: 2,text: '生命体征采集设备',total: '300',intactrate: '80%',alarm: '25条' },
+  { id: 3,text: '运动康复设备',total: '300',intactrate: '80%',alarm: '25条' },
+  { id: 4,text: '物品信息采集设备',total: '300',intactrate: '80%',alarm: '25条' },
+  { id: 5,text: '戒毒医疗设备',total: '300',intactrate: '80%',alarm: '25条' },
+  { id: 6,text: '环境信息采集设备',total: '300',intactrate: '80%',alarm: '25条' },
+  { id: 7,text: '资源消耗计量设备',total: '300',intactrate: '80%',alarm: '25条' },
+  { id: 8,text: '智能交互终端',total: '300',intactrate: '80%',alarm: '25条' },
+  { id: 9,text: '无线通讯设备',total: '300',intactrate: '80%',alarm: '25条' },
+  { id: 10,text: '电平量开关量控制设备',total: '300',intactrate: '80%',alarm: '25条' },
+  { id: 11,text: '监控摄像设备',total: '300',intactrate: '80%',alarm: '25条' },
+  { id: 12,text: '教育矫正设备',total: '300',intactrate: '80%',alarm: '25条' }
 ];
 const totalData = [
   { number: '123456',text: '设备总数' },
@@ -28,7 +28,7 @@ const devManage = () => {
     <div className="devManage-container">
       <div className="devManage-container-left">
         {
-          _.map(totalData, item => (<div className="dev-con-left-box">
+          _.map(totalData, item => (<div className="dev-con-left-box" key={item.text}>
             <div className="box-img">
               <span>{item.number}</span>
             </div>
@@ -40,7 +40,7 @@ const devManage = () => {
       </div>
       <div className="devManage-container-right">
         {
-          _.map(devData, cId => (<div className="dev-con-right-box" onClick={() => {
+          _.map(devData, cId => (<div className="dev-con-right-box" key={cId.id} onClick={() => {
             history.push('/InfoAnasy');
           }}>
             <h4>{cId.text}</h4>

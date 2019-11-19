@@ -110,7 +110,7 @@ export default ({ match }) => {
             </div>
           </div>
           {
-            visible ? (<InfoAsyList />) : (<Tables columns={columns} />)
+            visible ? (<InfoAsyList />) : (<Tables columns={columns} handleControl />)
           }
         </div>
       </div>

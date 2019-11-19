@@ -194,6 +194,9 @@ font-size: 12px;
   background-color: #07629F !important;
   color: #00D8FF;
 }
+.ant-table-tbody > tr > td span a{
+  color: #fff;
+}
 .ant-table-tbody tr:nth-child(2n+1){
   background: rgba(9,48,96,0.3);
 }

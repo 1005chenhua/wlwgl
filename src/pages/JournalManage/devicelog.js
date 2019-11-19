@@ -2,15 +2,14 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { createHashHistory } from 'history';
 import { Select,Button,DatePicker } from 'antd';
-
 import _ from 'lodash';
+import locale from 'antd/lib/date-picker/locale/zh_CN';
+import moment from 'moment';
+import 'moment/locale/zh-cn';
+moment.locale('zh-cn');
 const { Option } = Select;
 const history = createHashHistory();
 const devicelog = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [startValue, setStartValue] = useState('');
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [endValue, setEndValue] = useState('');
   const handleChange = (value) => {
     console.log(value);
   };
@@ -26,19 +25,12 @@ const devicelog = () => {
     { text: '2019-09-09 19:00:00宿舍楼201室的"位置收集设备,编号MZ00001"异常',id: 0,date: '2019-09-09',time: '17:54:30' },
     { text: '2019-09-09 19:00:00宿舍楼201室的"位置收集设备,编号MZ00001"异常',id: 0,date: '2019-09-09',time: '17:54:30' },
   ];
-  const disabledStartDate = startValue => {
-    if (!startValue || !endValue) {
-      return false;
-    }
-    return startValue.valueOf() > endValue.valueOf();
+  const handleStartOpenChange = (date, dateString) => {
+    console.log(dateString);
   };
-  const onStartChange = value => {
-    setStartValue(value);
-  };
-  const handleStartOpenChange = open => {
-    if (!open) {
-      //   this.setState({ endOpen: true });
-    }
+
+  const handleEndOpenChange = (date, dateString) => {
+    console.log(dateString);
   };
   return (
     <div className="devicelog-container">
@@ -74,19 +66,11 @@ const devicelog = () => {
           </div>
           <div className="dev-search-select">
             <span className="dev-search-select-title">报警开始时间</span>
-            <DatePicker
-              disabledDate={disabledStartDate}
-              showTime
-              format="YYYY-MM-DD HH:mm:ss"
-              value={startValue}
-              placeholder="Start"
-              onChange={onStartChange}
-              onOpenChange={handleStartOpenChange}
-            />
+            <DatePicker onChange={ handleStartOpenChange } locale={locale} />
           </div>
           <div className="dev-search-select">
             <span className="dev-search-select-title">报警结束时间</span>
-            <input type="text" />
+            <DatePicker onChange={ handleEndOpenChange } locale={locale} />
           </div>
           <Button type="link" className="search">搜索</Button>
         </div>
