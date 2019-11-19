@@ -100,8 +100,6 @@ const InfoAsyDetail = () => {
     console.log('clicked', label);
   }
   const TextAreaOnChange = (e) => {
-    // this.setState({ value });
-    console.log(e.target.value.length);
     setTextAreaLgn(e.target.value.length);
   };
   return (
@@ -224,7 +222,7 @@ const InfoAsyDetail = () => {
                   <TextArea
                     onChange={TextAreaOnChange}
                     placeholder="请输入备注"
-                    autoSize={{ minRows: 3, maxRows: 5 }}
+                    // autoSize={{ minRows: 3, maxRows: 5 }}
                   />
                   <span className="total">{textAreaLgn}/500</span>
                 </div>
@@ -252,7 +250,7 @@ const InfoAsyDetail = () => {
                   style={{ width: '100%' }}
                   onChange={ handleAreaClick }
                   onClick={() => {
-                    console.log(document.querySelectorAll('.ant-cascader-menu'));
+                    // console.log(document.querySelectorAll('.ant-cascader-menu'));
                     setmtop(180);
                   }}
                 />
