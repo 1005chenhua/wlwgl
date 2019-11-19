@@ -9,10 +9,11 @@ import AuthRoute from './authRoute';
 
 import LoginPage from '@/pages/loginPage';
 import ServiceSelect from '@/pages/serviceSelect';
-import InfoAnasy from '@/pages/deviceManage/infoAnasy/index';
-import DeviceManage from '@/pages/deviceManage';
-import CallpoliceManage from '@/pages/callpoliceManage';
-import JournalManage from '@/pages/JournalManage';
+import InfoAnasy from '@/pages/deviceManage/infoAnasy/index'; // 设备管理/采集分析详情
+import DeviceManage from '@/pages/deviceManage'; // 设备管理
+import CallpoliceManage from '@/pages/callpoliceManage'; // 报警管理
+import JournalManage from '@/pages/JournalManage'; // 日志管理
+import Statistics from '@/pages/statistics'; // 日志管理
 import Page404 from '@/pages/page404';
 import InfoAsyDetail from '@/pages/deviceManage/infoAnasy/infoAsyDetails';
 import InfoAsyAdd from '@/pages/deviceManage/infoAnasy/infoAsyAdd';
@@ -57,6 +58,7 @@ export default () => (
       <Route exact path="/InfoAnasy" component={InfoAnasy} />
       <Route exact path="/InfoAsyDetail" component={InfoAsyDetail} />
       <Route exact path="/InfoAsyAdd" component={InfoAsyAdd} />
+      <Route exact path="/Statistics" component={Statistics} />
       <AuthRoute path="/jd" authTo="/login" component={DeviceManage} />
       <Redirect from="/" to="/Home" />
       <Route component={Page404} />
