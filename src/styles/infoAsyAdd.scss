@@ -75,7 +75,7 @@
                     }
                 }
                 input{
-                    border:1px solid rgba(7, 166, 255, 0.76);
+                    border:none;//1px solid rgba(7, 166, 255, 0.76);
                     padding-left: 10px;
                     @include input_comm();
                     &::-webkit-input-placeholder {
@@ -177,9 +177,8 @@
 }
 .ant-cascader-picker-clear:hover{
     color: rgb(0, 0, 0);
-    background: transparent;
+    background: transparent !important;
 }
-.inforAnasy-container-add .other input:hover .ant-cascader-picker-clear{
-    color: rgb(0, 0, 0);
+.anticon[tabindex]{
     background: transparent;
 }
