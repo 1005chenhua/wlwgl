@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Progress } from 'antd';
 
+import VitalSigTable from '../vitalSigns/vitalSigTable';
 import _ from 'lodash';
 const inforStatic = () => {
-  return (
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [isHidden, setHidden] = useState(true);
+  return isHidden ? (
     <div className="inforStatic-container-right">
       <div className="portrait-box">
         <img src={require('../../../assets/images/infostatic/portrait-bg.png')} alt="" />
@@ -39,11 +42,12 @@ const inforStatic = () => {
           </div>
         </div>
       </div>
-      <div className="change-box">
+      <div className="change-box" onClick={() => setHidden(false)}>
         <img src={require('../../../assets/images/change.png')} alt="" />
       </div>
     </div>
-  );
+  ) : (<VitalSigTable />);
+
 };
 
 
