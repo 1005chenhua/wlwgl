@@ -54,10 +54,109 @@
         .collection-box {
             width: 40%;
             padding: 40px 20px;
-            .collection-box-cencus {
+            &-cencus {
                 width: 411px;
                 height: 411px;
-                border: 1px solid #6FE6F4;
+                border: 1px dashed#6FE6F4;
+                border-radius: 50%;
+                position: relative;
+                .ant-progress-text {
+                    display: none;
+                }
+                .ant-progress {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    .ant-progress-circle-trail {
+                        stroke: rgba(27, 94, 157,0.95) !important;
+                    }
+                    &:nth-child(1) {
+                        margin-top: -60px;
+                        margin-left: -60px;
+                        transform: rotate(90deg);
+                        .ant-progress-circle-path {
+                            stroke: RGBA(111, 230, 244, 1) !important;
+                        }
+                    }
+                    &:nth-child(2) {
+                        margin-top: -100px;
+                        margin-left: -100px;
+                        transform: rotate(90deg);
+                        .ant-progress-circle-path {
+                            stroke: RGBA(134, 248, 189, 1) !important;
+                        }
+                    }
+                    &:nth-child(3) {
+                        margin-top: -142.5px;
+                        margin-left: -142.5px;
+                        transform: rotate(180deg);
+                        .ant-progress-circle-path {
+                            stroke: RGBA(0, 255, 255, 1) !important;
+                        }
+                    }
+                    &:nth-child(4) {
+                        margin-top: -189.5px;
+                        margin-left: -189.5px;
+                        transform: rotate(180deg);
+                        .ant-progress-circle-path {
+                            stroke: RGBA(3, 115, 253, 1) !important;
+                        }
+                    }
+                }
+            }
+            &-text {
+                padding-top: 40px;
+                &-textBox {
+                    width: 32%;
+                    height: 20px;
+                    margin: 14px 0 0 130px;
+                    span:last-child {
+                        float: right;
+                    }
+                    span:first-child {
+                        color: #fff;
+                        padding-left: 10px;
+                    }
+                    &:before {
+                        content: '';
+                        width: 10px;
+                        height: 10px;
+                        background: #fff;
+                        display: inline-block;
+                    }
+                    &:nth-child(1){
+                        span:last-child {
+                            color: #6FE6F4;
+                        }
+                        &:before {
+                            background: #6FE6F4;
+                        }
+                    }
+                    &:nth-child(2){
+                        span:last-child {
+                            color: #86F8BD;
+                        }
+                        &:before {
+                            background: #86F8BD;
+                        }
+                    }
+                    &:nth-child(3){
+                        span:last-child {
+                            color: #86F8BD;
+                        }
+                        &:before {
+                            background: #86F8BD;
+                        }
+                    }
+                    &:nth-child(4){
+                        span:last-child {
+                            color: #0373FD;
+                        }
+                        &:before {
+                            background: #0373FD;
+                        }
+                    }
+                }
             }
         }
         .change-box {
