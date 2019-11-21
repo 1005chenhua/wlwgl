@@ -104,6 +104,11 @@ export default ({ match }) => {
               <Button type="link" className="search">搜索</Button>
             </div>
           </div>
+          <div className="assetInfo">
+            <div>资产编号：MB12345678900</div>
+            <div>设备名称：智能床垫#201</div>
+            <div>资产种类：智能床垫</div>
+          </div>
           <Tables columns={columns} />
         </div>
       </div>
