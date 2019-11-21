@@ -1,3 +1,5 @@
+/* eslint-disable semi */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 import { Progress,Button,Pagination,Select,Icon, DatePicker } from 'antd';
 import { RouteList, asyncRoutes } from '@/router';
@@ -20,7 +22,6 @@ export default ({ match }) => {
   const handleStartOpenChange = (date, dateString) => {
     console.log(dateString);
   };
-
   const handleEndOpenChange = (date, dateString) => {
     console.log(dateString);
   };

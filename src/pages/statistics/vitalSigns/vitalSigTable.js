@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Button, Select } from 'antd';
@@ -29,18 +30,20 @@ const articleTable = () => {
       title: '业务信息上报次数',
       dataIndex: 'address',
       key: 'address',
+      render: text => <a onClick={() => history.push('/SignDetail')}>{text}</a>,
     },
     {
       title: '业务信息报警次数',
       dataIndex: 'startTime',
       key: 'startTime',
+      render: text => <a onClick={() => history.push('/CallpoliceManage')}>{text}</a>,
     }
   ];
   return (
     <div style={{ width: '100%' }}>
       <div className="inforAnasy-container-top" style={{ paddingLeft: '0' }}>
         <div className="inforAnasy-container-top-btn">
-          <Button type="link" onClick={() => history.push('/SignDetail')}><img src={require('../../../assets/images/add.png')} alt="" />导出EXCEL</Button>
+          <Button type="link"><img src={require('../../../assets/images/add.png')} alt="" />导出EXCEL</Button>
           <span className="btnchange">
             <img src={require('../../../assets/images/change.png')} alt="" />
           </span>

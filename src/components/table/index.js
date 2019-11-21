@@ -14,7 +14,7 @@ export default ({ columns, handleControl = false }) => {
   const data = [
     {
       key: '1',
-      type: 'Mike',
+      type: 'Mike4',
       kind: 32,
       numberNo: 1,
       address: '10 Downing Street',
@@ -24,7 +24,7 @@ export default ({ columns, handleControl = false }) => {
     },
     {
       key: '2',
-      type: 'Mike',
+      type: 'Mike3',
       kind: 32,
       numberNo: 2,
       address: '10 Downing Street',
@@ -34,7 +34,7 @@ export default ({ columns, handleControl = false }) => {
     },
     {
       key: '3',
-      type: 'Mike',
+      type: 'Mike2',
       kind: 32,
       numberNo: 3,
       address: '10 Downing Street',
@@ -44,7 +44,7 @@ export default ({ columns, handleControl = false }) => {
     },
     {
       key: '4',
-      type: 'Mike',
+      type: 'Mike1',
       kind: 32,
       numberNo: 4,
       address: '10 Downing Street',
@@ -57,24 +57,25 @@ export default ({ columns, handleControl = false }) => {
     console.log(value);
   };
   return (
-    <Table dataSource={data} className="tableName">
-      {
-        _.map(columns, item => (
-          <Column title={item.title} dataIndex={item.dataIndex} key={item.key} />
-        ))
-      }
-      { handleControl && <Column // handleControl为true显示column
-        title="操作"
-        key="action"
-        render={(text, record) => (
-          <span>
-            <a>远程操控</a>
-            <a>详情</a>
-            <a>编辑</a>
-            <a onClick={() => { deleteList(record) }}>删除</a>
-          </span>
-        )}
-      />}
-    </Table>
+    <Table columns={columns} dataSource={data} />
+    // <Table dataSource={data} className="tableName" >
+    //   {
+    //     _.map(columns, item => (
+    //       <Column title={item.title} dataIndex={item.dataIndex} key={item.key} />
+    //     ))
+    //   }
+    //   { handleControl && <Column // handleControl为true显示column
+    //     title="操作"
+    //     key="action"
+    //     render={(text, record) => (
+    //       <span>
+    //         <a>远程操控</a>
+    //         <a>详情</a>
+    //         <a>编辑</a>
+    //         <a onClick={() => { deleteList(record) }}>删除</a>
+    //       </span>
+    //     )}
+    //   />}
+    // </Table>
   );
 };

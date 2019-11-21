@@ -1,3 +1,5 @@
+/* eslint-disable semi */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 import { Progress,Button,Pagination,Select,Icon } from 'antd';
 import { RouteList, asyncRoutes } from '@/router';
@@ -15,11 +17,15 @@ export default ({ match }) => {
   const handleChange = (value) => {
     console.log(value);
   };
+  const editorInfo = (record) => {
+    console.log('编辑',record);
+  };
   const columns = [
     {
       title: '设备编码',
       dataIndex: 'type',
       key: 'type',
+      render: (text,record) => <a onClick={() => { console.log(record) }}>{text}</a>,
     },
     {
       title: '设备名称',
@@ -55,6 +61,20 @@ export default ({ match }) => {
       title: '在线状态',
       dataIndex: 'online',
       key: 'online',
+    },
+    {
+      title: '操作',
+      dataIndex: 'caozuo',
+      key: 'caozuo',
+      render: (text, record) => ( // 塞入内容
+        <span>
+          <a className="edit-data" style={{ cursor: 'pointer' }} onClick={() => {}}>远程操控</a>
+          <a className="edit-data" style={{ cursor: 'pointer' }} onClick={() => { console.log('删除') }}>删除</a>
+          <a className="edit-data" onClick={() => editorInfo(record)}>编辑</a>
+          {/* <a className="delete-data" onClick={this.deletSource.bind(this,text)}>删除</a> */}
+          {/* <Link className="topo-data" to={{ pathname: '/a',query: { id: text.id } }}>数据拓扑</Link> */}
+        </span>
+      ),
     }
   ];
   return (
