@@ -7,8 +7,8 @@ const history = createHashHistory();
 // eslint-disable-next-line complexity
 export default ({ match }) => {
   return (
-    <div className="inforStatic-container-right">
-      运动康复
+    <div className="inforStatic-container-right sport-container">
+      <div className="sport-container-top">111</div>
     </div>
   );
 };

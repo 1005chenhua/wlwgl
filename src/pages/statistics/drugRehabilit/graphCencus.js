@@ -8,7 +8,7 @@ const history = createHashHistory();
 export default ({ match }) => {
   return (
     <div className="inforStatic-container-right">
-      运动康复
+      戒毒医疗
     </div>
   );
 };

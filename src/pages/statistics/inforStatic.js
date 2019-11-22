@@ -6,6 +6,8 @@ import { createHashHistory } from 'history';
 import { Select,Button,DatePicker } from 'antd';
 import ArticeCencus from './vitalSigns/graphCencus'; // 生命体征
 import ArticleInfo from './articleInfo/graphCencus'; // 物品信息
+import SportRey from './sportRey/graphCencus'; // 运动康复
+
 
 import _ from 'lodash';
 const { Option } = Select;
@@ -40,7 +42,7 @@ const inforStatic = () => {
             case 0:
               return <ArticeCencus />;
             case 1:
-              return <ArticleInfo />;
+              return <SportRey />;
           }
         })()
         }
