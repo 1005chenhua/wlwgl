@@ -1,7 +1,28 @@
 .sport-container{
     background: url(../assets/images/infostatic/sportBg.png);
     background-size: 100% 100%;
+    padding-top: 25px;
     &-top{
-        
+        width: 294px;
+        height: 38px;
+        background:url(../assets/images/infostatic/bzBg.png);
+        background-size: 100% 100%;
+        position: relative;
+        padding-left: 95px;
+        i{
+            color: #fff;
+            font-style: normal;
+            line-height: 38px;
+        }
+        i::before{
+            position: absolute;
+            content:"";
+            width: 26px;
+            height: 24px;
+            background: url(../assets/images/infostatic/biaozhi.png);
+            background-size: 100% 100%;
+            left: 55px;
+            top: 5px;
+        }
     }
 }
